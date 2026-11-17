@@ -3,7 +3,7 @@ name = "SigmaOS-addresssanitizer"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "addresssanitizer component"
+description = "AddressSanitizer"
 upstream = []
 
 [contract]
