@@ -1,62 +1,50 @@
-# SigmaOS-addresssanitizer Component Wiki
+# SigmaOS-SigmaOS-addresssanitizer Component Wiki
 
 ## Overview
-SigmaOS-addresssanitizer provides address sanitizer and memory error detection for the SigmaOS operating system. It demonstrates the memory safety subsystem and runtime error detection within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic sanitizer initialization.
+SigmaOS-SigmaOS-addresssanitizer provides AddressSanitizer for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Memory Safety Abstraction
-- Fail-Fast on Sanitizer Initialization Errors
-- Deterministic Sanitizer Setup
-- Clear Abstraction Over Sanitizer APIs
-- Composition over Inheritance for sanitizer extensions
+- SigmaOS-addresssanitizer Abstraction
+- Fail-Fast on SigmaOS-addresssanitizer Initialization Errors
+- Deterministic SigmaOS-addresssanitizer Setup
+- Clear Abstraction Over SigmaOS-addresssanitizer APIs
+- Composition over Inheritance for SigmaOS-addresssanitizer extensions
 
 ## Architecture
-SigmaOS-addresssanitizer follows a sanitizer pattern:
-- **Sanitizer Core**: Provides memory error detection, buffer overflow detection, and use-after-free detection
-- **Runtime Instrumentation**: Supports compile-time and runtime instrumentation for error tracking
-- **Error Reporting**: Supports structured error output and integration with debugging tools
-- **Error Handling**: Fail-fast on invalid sanitizer configurations or unsupported architectures
+SigmaOS-SigmaOS-addresssanitizer follows a SigmaOS-addresssanitizer pattern:
+- **SigmaOS-addresssanitizer Core**: Provides SigmaOS-addresssanitizer support, SigmaOS-addresssanitizer management, and SigmaOS-addresssanitizer tracking
+- **Management**: Supports SigmaOS-addresssanitizer management, SigmaOS-addresssanitizer configuration, and SigmaOS-addresssanitizer lifecycle
+- **Tracking**: Supports SigmaOS-addresssanitizer status, SigmaOS-addresssanitizer tracking, and SigmaOS-addresssanitizer lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-addresssanitizer configurations or unsupported SigmaOS-addresssanitizer types
 
 ## API
 The component provides the following public APIs:
-- `sanitize::enable()` - Enable address sanitizer for the current session
-- `sanitize::disable()` - Disable address sanitizer
-- `sanitize::report::current()` - Get the current sanitizer report
-- `sanitize::check::memory(ptr, size)` - Check memory region for errors
-- Error types for sanitizer failure scenarios or unsupported architectures
+-  - Manage a SigmaOS-addresssanitizer by given configuration
+-  - Register a SigmaOS-addresssanitizer by given name
+-  - Get SigmaOS-addresssanitizer status and SigmaOS-addresssanitizer availability
+-  - Track SigmaOS-addresssanitizer management and SigmaOS-addresssanitizer tracking
+- Error types for SigmaOS-addresssanitizer failure scenarios or unsupported SigmaOS-addresssanitizer types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific sanitizer configuration
-2. **Act**: Execute the code under test (memory enable, error checking)
-3. **Assert**: Verify the expected sanitizer results
+1. **Arrange**: Set up test environment with specific SigmaOS-addresssanitizer configuration
+2. **Act**: Execute the code under test (SigmaOS-addresssanitizer init, SigmaOS-addresssanitizer management)
+3. **Assert**: Verify the expected SigmaOS-addresssanitizer results
 
 Example:
-```rust
-#[test]
-fn test_sanitize_enable_aaa() {
-    // Arrange
-    
-    // Act
-    let result = sanitize::enable();
-    
-    // Assert
-    assert!(result.is_ok());
-    assert!(sanitize::is_enabled());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Sanitizer initialization is best-effort; gracefully degrades on unsupported architectures
-- Comprehensive error types for all sanitizer failure scenarios
-- Unit tests provided for sanitizer enable/disable and error checking
-- Integration tests for full memory safety subsystem with actual error detection
+- Follows Rust best practices with 
+- SigmaOS-addresssanitizer initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-addresssanitizer failure scenarios
+- Unit tests provided for SigmaOS-addresssanitizer management and configuration
+- Integration tests for full SigmaOS-addresssanitizer system with actual SigmaOS-addresssanitizer integration
 
 ## TODO
-- Add support for additional sanitizer types (thread sanitizer, loop sanitizer)
-- Expand error reporting capabilities (custom reporters, integration with IDEs)
-- Add architecture support (x86_64, aarch64, embedded targets)
-- Create integration tests with actual memory error scenarios
-- Implement sanitizer configuration and suppression features
+- Add support for additional SigmaOS-addresssanitizer types
+- Expand SigmaOS-addresssanitizer capabilities (SigmaOS-addresssanitizer features, SigmaOS-addresssanitizer configurations, SigmaOS-addresssanitizer tracking)
+- Add lifecycle features (SigmaOS-addresssanitizer tracking, SigmaOS-addresssanitizer lifecycle, SigmaOS-addresssanitizer propagation)
+- Create integration tests with actual SigmaOS-addresssanitizer systems and SigmaOS-addresssanitizer integration
+- Implement SigmaOS-addresssanitizer persistence and SigmaOS-addresssanitizer state management
